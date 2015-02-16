@@ -23,10 +23,14 @@ require.config({
         'nprogress': 'bower_components/nprogress/nprogress',
         'textangular': 'bower_components/textAngular/dist/textAngular.min',
         'angular-ui-codemirror': 'bower_components/angular-ui-codemirror/ui-codemirror.min',
+        'papaparse': 'bower_components/papaparse/papaparse.min',
         'MainModule': 'ng-admin/Main/MainModule',
         'CrudModule': 'ng-admin/Crud/CrudModule'
     },
     shim: {
+        'papaparse': {
+            exports: 'Papa'
+        },
         'restangular': {
             deps: ['angular', 'lodash']
         },

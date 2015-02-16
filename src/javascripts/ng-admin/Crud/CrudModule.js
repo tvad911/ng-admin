@@ -65,12 +65,19 @@ define(function (require) {
     CrudModule.directive('maShowButton', require('ng-admin/Crud/button/maShowButton'));
     CrudModule.directive('maListButton', require('ng-admin/Crud/button/maListButton'));
     CrudModule.directive('maDeleteButton', require('ng-admin/Crud/button/maDeleteButton'));
+    CrudModule.directive('maExportToCsvButton', require('ng-admin/Crud/button/maExportToCsvButton'));
 
     CrudModule.directive('maViewActions', require('ng-admin/Crud/misc/ViewActions'));
     CrudModule.directive('compile', require('ng-admin/Crud/misc/Compile'));
     CrudModule.run(require('ng-admin/Crud/misc/cacheTemplate'));
 
     CrudModule.config(require('ng-admin/Crud/routing'));
+
+    CrudModule.service('EntryFormater', require('ng-admin/Crud/misc/EntryFormater'));
+
+    CrudModule.factory('Papa', function () {
+        return require('papaparse');
+    });
 
     CrudModule.factory('notification', function () {
         return require('humane');
