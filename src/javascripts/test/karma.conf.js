@@ -2,7 +2,7 @@ module.exports = function (config) {
     'use strict';
     config.set({
         basePath: '../',
-        frameworks: ['requirejs', 'jasmine'],
+        frameworks: ['requirejs', 'jasmine', 'phantomjs-shim'],
         browsers: [process.env.CI ? 'PhantomJS' : 'Chrome'],
         plugins: ['karma-requirejs', 'karma-jasmine', 'karma-chrome-launcher', 'karma-phantomjs-launcher', 'karma-babel-preprocessor'],
 
